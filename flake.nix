@@ -13,13 +13,16 @@
           ];
         };
         python_with_langchain = pkgs.python3.withPackages (py-pkgs: with py-pkgs; [
+          chromadb
           langchain
+          pypdf
         ]);
       in
       {
         devShells.default = pkgs.mkShell {
           packages = [
             my_rstudio
+            pkgs.ollama
             python_with_langchain
           ];
           RETICULATE_PYTHON = "${python_with_langchain}/bin/python3";
