@@ -1,3 +1,5 @@
+from langchain_community.llms import Ollama
+llm = Ollama(model="mistral")
 
 def run_llm(query):
-  return f"{query} The answer is none"
+  return llm.invoke(query)

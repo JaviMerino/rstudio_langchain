@@ -12,12 +12,15 @@
             reticulate
           ];
         };
+        python_with_langchain = pkgs.python3.withPackages (py-pkgs: with py-pkgs; [
+          langchain
+        ]);
       in
       {
         devShells.default = pkgs.mkShell {
           packages = [
             my_rstudio
-            pkgs.python311
+            python_with_langchain
           ];
         };
         apps.default = {
