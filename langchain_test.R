@@ -1,9 +1,7 @@
 library(reticulate)
 
-importlib <- import("importlib")
+llms = import("langchain_community.llms")
+Ollama = llms$Ollama
+llm = Ollama(model = "mistral")
 
-my_script = import("my_script")
-# Annoying, but to force reticulate to reload my python modules
-importlib$reload(my_script)
-
-my_script$run_llm("How much wood would a woodchuck chuck?")
+llm$invoke("How much wood would a woodchuck chuck?")
