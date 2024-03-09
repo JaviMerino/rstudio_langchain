@@ -2,8 +2,6 @@ library(reticulate)
 
 source("params.R")
 
-# virtualenv_install(envname='r-reticulate', packages=c('pypdf', 'chromadb'))
-
 # Import langchain objects
 document_loaders = import("langchain_community.document_loaders")
 text_splitter = import("langchain.text_splitter")
@@ -13,7 +11,6 @@ PyPDFLoader = document_loaders$PyPDFLoader
 doc_splitter = text_splitter$RecursiveCharacterTextSplitter()
 embeddings = embeddings_import$OllamaEmbeddings(model=model)
 Chroma = vectorstores$Chroma
-
 
 # TODO Generalize to all PDFs in the docs folder
 my_doc = PyPDFLoader('docs/ggplot2.pdf')
