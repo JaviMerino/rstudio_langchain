@@ -17,5 +17,9 @@
         devShells.default = pkgs.mkShell {
           packages = [ my_rstudio ];
         };
+        apps.default = {
+          type = "app";
+          program = "${my_rstudio}/bin/rstudio";
+        };
       });
 }
