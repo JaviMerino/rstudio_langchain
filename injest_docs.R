@@ -2,6 +2,8 @@ library(reticulate)
 
 source("params.R")
 
+# virtualenv_install(envname='r-reticulate', packages=c('pypdf', 'chromadb'))
+
 # Import langchain objects
 document_loaders = import("langchain_community.document_loaders")
 text_splitter = import("langchain.text_splitter")
@@ -23,4 +25,4 @@ vectordb = Chroma$from_documents(
   embedding = embeddings,
   persist_directory = chromadb_file
 )
-vectordb.persist()
+vectordb$persist()
