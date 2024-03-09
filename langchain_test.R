@@ -1,2 +1,4 @@
 library(reticulate)
-reticulate::py_run_string('print("Hello, world!")')
+
+my_script = import("my_script")
+my_script$run_llm()

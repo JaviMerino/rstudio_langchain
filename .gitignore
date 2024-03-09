@@ -1,1 +1,4 @@
 /.direnv/
+/.RData
+/.Rhistory
+/__pycache__/
