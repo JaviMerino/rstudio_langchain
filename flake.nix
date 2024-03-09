@@ -22,6 +22,7 @@
             my_rstudio
             python_with_langchain
           ];
+          RETICULATE_PYTHON = "${python_with_langchain}/bin/python3";
         };
         apps.default = {
           type = "app";
