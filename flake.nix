@@ -15,7 +15,10 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = [ my_rstudio ];
+          packages = [
+            my_rstudio
+            pkgs.python311
+          ];
         };
         apps.default = {
           type = "app";
