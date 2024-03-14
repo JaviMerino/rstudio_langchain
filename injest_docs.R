@@ -22,4 +22,3 @@ vectordb = Chroma$from_documents(
   embedding = embeddings,
   persist_directory = chromadb_file
 )
-vectordb$persist()
