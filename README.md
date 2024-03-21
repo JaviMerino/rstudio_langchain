@@ -1,19 +1,20 @@
-Playground to try something like:
-
-https://www.infoworld.com/article/3703249/generative-ai-with-langchain-rstudio-and-just-enough-python.html
+Playground to play with local LLMs using R.
 
 ## Installation
 
 ### Nix
-Run RStudio with `nix run`
+1. Run the ollama server using: `nix run nixpkgs#ollama --serve`
+2. Run RStudio with `nix run`
+
 
 ### Linux or MacOS
-1. Install R and RStudio
-2. Install reticulate
-  * RStudio should prompt you
-3. In the r-reticulate virtualenv, install langchain, pypdf and chromadb
-  * In R: `virtualenv_install(envname='r-reticulate', packages=c('langchain', 'pypdf', 'chromadb'))`
-  * Otherwise, using pip, the virtualenv is in `~/.virtualenvs/r-reticulate`
+1. Install ollama
+2. Install R and RStudio
+3. Install reticulate
+   * RStudio should prompt you
+4. In the r-reticulate virtualenv, install langchain, pypdf and chromadb
+   * In R: `virtualenv_install(envname='r-reticulate', packages=c('langchain', 'pypdf', 'chromadb'))`
+   * Otherwise, using pip, the virtualenv is in `~/.virtualenvs/r-reticulate`
 
 ## Usage
 
