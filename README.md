@@ -12,8 +12,9 @@ Playground to play with local LLMs using R.
 2. Install R and RStudio
 3. Install reticulate
    * RStudio should prompt you
-4. In the r-reticulate virtualenv, install langchain, pypdf and chromadb
-   * In R: `virtualenv_install(envname='r-reticulate', packages=c('langchain', 'pypdf', 'chromadb'))`
+4. In the r-reticulate virtualenv, install langchain, pypdf, chromadb
+   and ollama
+   * In R: `virtualenv_install(envname='r-reticulate', packages=c('langchain', 'pypdf', 'chromadb', 'ollama'))`
    * Otherwise, using pip, the virtualenv is in `~/.virtualenvs/r-reticulate`
 
 ## Usage
