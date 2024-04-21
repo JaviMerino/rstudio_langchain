@@ -19,4 +19,4 @@ ask_question <- function(query, k=4L) {
   return (response$response)
 }
 
-print(ask_question("What are the best predictors of COPD exacerbations?"))
+cat(ask_question("How is COPD exacerbation defined?"))
