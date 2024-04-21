@@ -15,6 +15,7 @@
         python_with_langchain = pkgs.python3.withPackages (py-pkgs: with py-pkgs; [
           chromadb
           langchain
+          #py-pkgs.ollama
           pypdf
         ]);
       in
